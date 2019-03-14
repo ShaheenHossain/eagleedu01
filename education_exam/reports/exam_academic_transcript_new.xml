@@ -443,8 +443,8 @@
                                                                        <!--</t>-->
                                                                </t>
                                                                <t t-else="">
-                                                                    Total Mark Without Additional Subject:
-                                                                   <p>Percentage of total mark without additional subject:
+                                                                    Total Mark Without 4th Subject:
+                                                                   <p>Percentage of total mark without 4th subject:
                                                                        <t t-if="exam_total==0">0</t>
                                                                        <t t-else="">
                                                                             <t t-esc="round(exam_obtained_total/exam_total*100,2)"/>
@@ -475,7 +475,7 @@
                                         <!--calculation for fourth/Optional subject-->
 
                                         <t t-if="fourth_subject>0">
-                                                 <tr><td colspan="100%">Additional Subjects: (Marks above 40% and GPA above 2.0)</td> </tr>
+                                                 <tr><td colspan="100%">4th Subjects: (Marks above 40% and GPA above 2.0)</td> </tr>
                                             <t t-foreach="optional_subjects" t-as="subject">
                                                <tr>
                                                    <t t-foreach="exams" t-as="exam">
@@ -554,8 +554,8 @@
                                                        <t t-if="exam_first">
                                                             <p>&lt;/tr&gt;&lt;tr&gt;</p>
                                                            <td t-att-colspan="mark_type_count*2+2 +paper_field">
-                                                                Total Mark with Additional Subject:
-                                                               <p>percentage of total mark with additional subjects</p>
+                                                                Total Mark with 4th Subject:
+                                                               <p>percentage of total mark with 4th subjects</p>
                                                            </td>
                                                            <td>
                                                                <t t-esc="get_exam_obtained_total(exam,student,'optional','general')"/>
